@@ -1,0 +1,580 @@
+/*
+    font-family: "Inter", sans-serif;
+    font-family: "Amatic SC", sans-serif;
+*/
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*::selection{
+    background-color: #DD5959;
+    color: white;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}  
+.empty-div{
+    width: 100%;
+    height: 80px;
+}
+
+.home{
+    width: 100%;
+    background-color: #EEEEEE;
+}
+.navbar{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    font-family: "Inter", sans-serif;
+    justify-content: space-between;
+    box-shadow: 0px 0.25px 4px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+}
+.navbar h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(33, 37, 41);
+    padding: 20px;
+}
+.navbar h1 span{
+    color: #CE1212;
+}
+.navbar .content-navbar{
+    display: none;
+}
+.navbar .icons{
+    color: rgb(33, 37, 41);
+    padding: 25px;
+    font-size: 25;
+}
+.navbar .icons i{
+    margin-right: 5px;
+}
+.home-photo{
+    width: 100%;
+    text-align: center;
+}
+.home-photo img{
+    padding-top: 40px;
+    width: 95%;
+    filter: drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.5));
+}
+.home-photo img:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.home-content{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.home-content h2{
+    padding-top: 20px;
+    color: rgb(55, 55, 63);
+    font-size: 65px;
+    font-weight: 700;
+    font-family: "Amatic SC", sans-serif;
+    margin-bottom: 20px;
+}
+.home-content p{
+    line-height: 26px;
+    color:rgb(79, 79, 90) ;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 25px;
+}
+.icon-2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+.icon-2 button{
+    background-color: #CE1212;
+    border: #CE1212 1px solid;
+    padding: 15px 30px;
+    color: white;
+    border-radius: 30px;
+    transition: all 1s;
+
+}
+.icon-2 button:hover{
+    background-color: red;
+    border-color:red ;
+
+}
+.player{
+    position: relative;
+}
+
+.icon-2 i{
+    display: inline-block;
+    padding-right: 20px;
+    position: absolute;
+    z-index: 3;
+    left: -20%;
+    top: -18%;
+    padding: 12px 14.5px 12px 15.5px;
+    border-radius: 100%;
+    background-color: white;
+    transition: all 1s;
+
+}
+.icon-2 p::after{
+    content: '';
+    width: 55px;
+    height: 55px;
+    background: linear-gradient( to right, #CE1212 0% 50% ,transparent 50% 50% );
+    position: absolute;
+    left:-25%;
+    top: -16;
+    border-radius: 100%;
+    
+}
+
+.icon-2 p{
+    position: relative;
+    display: inline-block;
+    padding-left: 25px;
+        transition: all 1s;
+
+}
+.icon-2 p:hover,.icon-2 i:hover{
+    color: #CE1212;
+}
+
+.chefs{
+    padding: 70px 0;
+    text-align: center;
+    background-color: #FAFAFA;
+}
+.tittle{
+    text-align: center;
+}
+.tittle p{
+    font-size: 14;
+    color: rgb(127, 127, 144);
+    font-family: "Inter", sans-serif;
+    margin-bottom: 10px;
+}
+.tittle h2{
+    font-size: 50;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    color:rgb(33, 37, 41) ;
+    margin-bottom:40px ;
+}
+.tittle h2 span{
+    color: #CE1212;
+}
+.our-chefs{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.chef{
+    width: 90%;
+    font-family: "Inter", sans-serif;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    border-radius: 7px;
+    transition: 1s all;
+    position: relative;
+    overflow: hidden;
+}
+.chef:hover{
+    width: 100%;
+    overflow: visible;
+}
+.chef:hover .layer{
+    right: 2px;
+}
+.chef img{
+    width: 100%;
+}
+.layer{
+    position: absolute;
+    width: 55px ;
+    padding: 12px 10;
+    background-color: white;
+    opacity: 0.3;
+    border-radius: 7px;
+    top: 15%;
+    right: -20%;
+    overflow: hidden;
+    transition: all 0.5s 0.5s;
+}
+.layer i{
+    padding: 10px;
+    font-size: 18;
+    line-height: 18px;
+    color: rgb(55, 55, 63);
+}
+.chef h2{
+    padding-top: 15px;
+    font-weight: 700;
+    font-size: 19;
+    color: rgb(33, 37, 41);
+    padding-bottom: 10px;
+}
+.chef p{
+    font-size: 15;
+    font-style: italic;
+    color: rgb(127, 127, 144);
+    padding-bottom: 20px;
+}
+#jop{
+    font-style: normal;
+    padding-bottom: 10;
+}
+
+
+.gallary{
+    width: 100%;
+    text-align: center;
+    background-color: #EEEEEE;
+    padding: 70px 0;
+}
+.items{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+.item{
+    margin: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.item h2{
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.layer2{
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    right: 0;
+    top: 100%;
+    background-color: rgb(0 0 0 / 60%);
+    transition: all 0.5s 0s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item:hover .layer2{
+    top: 0;
+}
+.item:hover img{
+    transform: scale(1.2);
+}
+.item img{
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.5s 0s;
+}
+
+.items p{
+    color: rgb(221, 221, 221);
+}
+.contact{
+    padding: 70px 0;
+    text-align: center;
+    background-color: #FAFAFA;
+}
+.map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.sections{
+    width: 100%;
+    margin: 30px 0;
+}
+.section{
+    text-align: left;
+    background-color: #EEEEEE;
+    margin: 20px;
+    padding: 25px 22px;
+    display: flex;
+    gap: 12px;
+    font-family: "Inter", sans-serif;
+
+}
+.section i{
+    font-weight: 900;
+    line-height: 18px;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 100%;
+    background-color: #CE1212;
+    color: white;
+    float: left;
+}
+.section h2{
+    color: (125, 125, 125)
+    ; font-size: 20;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: rgb(125, 125, 125);
+}
+.section p{
+    color: rgb(33, 37, 41);
+}
+.section span{
+    color: rgb(33, 37, 41);
+    font-weight: 700;
+}
+
+
+.forms{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    font-family: "Inter", sans-serif;
+
+}
+.forms input{
+    margin: 10px;
+}
+.forms input:checked{
+    border: 1px solid red;
+}
+
+#text-form{
+    padding: 15px 10px;
+    width: 95%;
+}
+
+#subject{
+    padding: 15px 10px;
+    width: 95%;
+}
+
+#message{
+    margin: 10px;
+    width: 95%;
+    padding: 15px 10px;
+    resize: both;
+    height: 140px;
+}
+
+.forms button{
+    background-color: #CE1212;
+    border: #CE1212 1px solid;
+    padding: 15px 50px;
+    color: white;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: all 1s;
+}
+.forms button:hover{
+    background-color: red;
+    border: 1px solid red;
+}
+
+.footer{
+    background-color: #050404;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 25px 10px;
+    font-family: "Inter", sans-serif;
+}
+input:focus{
+    border: #CE1212 1px solid;
+    outline: #CE1212 1px solid;
+}
+textarea:focus{
+    border: #CE1212 1px solid;
+    outline: #CE1212 1px solid;
+
+}
+.sec-1{
+    color: white;
+    width: 100%;
+    padding: 15px 7px;
+}
+.sec-1 .logo-2{
+    display: flex;
+    justify-content: center;
+}
+.logo-2 .title{
+    margin-top: 5px;
+    width: 90%;
+    padding-left: 3px;
+}
+.img{
+    width: 10%;
+}
+.sec-1 img{
+    padding: 5px;
+    width: 100%;
+}
+.sec-1 span{
+    color: #CE1212;
+}
+
+.content-sec-1{
+    width: 100%;
+}
+.sec-2{
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+.sec-2 h3{
+    font-size: 19;
+    font-weight: 700;
+    margin-top: 7px;
+
+}
+
+.sec-2 .icons-4::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 96%;
+    background-color: #585858;
+    top: -80%;
+    left: 2%;
+}
+
+.sec-2 .icons-4{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.sec-2 .icons-4 i{
+    font-size: 24;
+    line-height: 24px;
+}
+
+.sec-3{
+    color: white;
+    padding: 15px 7px;
+
+}
+
+.sec-3 h4{
+    font-weight: 700;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.sec-4{
+    padding: 10px 5px;
+    width: 100%;
+}
+#text-form-email{
+    padding: 10px 10px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.sec-4 button{
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: #CE1212;
+    border: #CE1212 solid 1px;
+    font-size: 15px;
+    border-radius: 2px;
+    transition: all 1s;
+}
+
+.sec-4 button:hover{
+    border-color:red ;
+    background-color: red;
+}
+.sec-5{
+    padding: 10px 5px;
+    width: 100%;
+    color: white;
+}
+.links{
+    position: relative;
+}
+
+.sec-5 h4{
+    font-weight: 700;
+    font-size: 19;
+    margin-bottom: 10px;
+}
+.sec-5 ul{
+    list-style: none;
+    width: 45%;
+    float: left;
+    overflow: hidden;
+    margin-right: 4px;
+    margin: 8px;
+}
+.sec-5 ul li{
+    padding: 7px 4px;
+    overflow: hidden;
+    transition: all 0.5s;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.sec-5 ul li:hover{
+    background-color: #222222;
+    left: 4%;
+}
+.sec-5 p{
+    display: inline;
+    padding-left: 6px;
+}
+.clr{
+    clear: both;
+}
+.sec-6{
+    padding: 10px 5px;
+    width: 100%;
+    color: white;
+
+}
+.sec-6 h4{
+    font-weight: 700;
+    font-size: 19;
+    margin-bottom: 10px;
+
+}
+.sec-6 i{
+    color: #CE1212;
+    font-weight: 900;
+    font-size: 22;
+    line-height: 22px;
+    padding: 12px;
+}
+.sec-6 p{
+    display: inline;
+}
